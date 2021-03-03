@@ -1,0 +1,835 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+/*########################### first page ##########################*/
+html{
+	scroll-behavior: smooth;
+}
+/*#################### Navbar ####################*/
+.max-width{
+	max-width: 1800px;
+	padding: 0px 80px;
+	margin: auto;
+}
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 10px 0;
+    font-family: 'Ubuntu', sans-serif;
+    transition: all 0.3s ease;
+    background-image: linear-gradient(to left bottom, #3af95a, #30dc47, #25c034, #18a521, #058b0c);
+}
+
+/*#################### sadly github can't read my js file###################
+*/.navbar.sticky{
+    padding: 15px 0;
+    /*background-image: linear-gradient(to left bottom, #3af95a, #30dc47, #25c034, #18a521, #058b0c);*/
+}
+.navbar .max-width{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar .logo a{
+    color: #fff;
+    font-size: 45px;
+    font-weight: 600;
+    text-shadow: 0 2px black;
+}
+.navbar .logo a span{
+    color: #2ecc71;
+    transition: all 0.3s ease;
+    text-shadow: 0 2px black;
+}
+.navbar.sticky .logo a span{
+    color: #fff;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 500;
+    margin-left: 25px;
+    transition: color 0.3s ease;
+    text-shadow: 2px 2px black;
+}
+.navbar .menu li a:hover{
+    color:#2ecc71;
+}
+.navbar.sticky .menu li a:hover{
+    color: crimson ;
+}
+/*####################### menu btn ###################*/
+.menu-btn{
+	color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+   background-image: linear-gradient(to left bottom, #3af95a, #30dc47, #25c034, #18a521, #058b0c);
+    right: 30px;
+    bottom: 10px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    z-index: 9999;
+    font-size: 30px;
+    border-radius: 6px;
+    border-bottom-width: 2px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom: 30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+.scroll-up-btn:hover{
+    filter: brightness(90%);
+}
+
+
+/*################## Home Section #################*/
+.home{
+	display: flex;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 100vh;
+	color:#ffffff;
+	background-attachment: fixed;
+	min-height: 500px;
+	font-family: 'Ubuntu', sans-serif;
+	text-shadow: 4px 2px #000;
+	width: 100%;
+	animation: slide 20s infinite;
+}
+.home .max-width{
+	margin: auto 0 auto 50px;
+}
+.home .home-content .text-1{
+	font-size: 45px;
+}
+.home .home-content .text-2{
+	font-size: 90px;
+	font-weight: 600;
+	margin-left: -3px;
+}
+.home .home-content .text-3{
+	font-size: 35px;
+	margin:10px 0;
+}
+.home .home-content .text-3 span{
+	color: #2ecc71;
+	font-weight:500;
+	text-shadow: 3px 3px #000;
+}
+.home .home-content a{
+	background-image: linear-gradient(to left bottom, #3af95a, #30dc47, #25c034, #18a521, #058b0c);
+	color: #ffffff;
+	font-size: 30px;
+	font-weight: 500;
+	padding: 8px 20px;
+	margin: 10px 0;
+	border-radius: 10px;
+	transition: all 0.3s ease;
+}
+.home .home-content a:hover{
+	letter-spacing: 2px;
+}
+
+.load{
+	animation:slide 2s;
+}
+.home-content{
+	color: #fff;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,0.5);
+
+}
+.principal{
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	letter-spacing: 5px;
+	text-align: center;
+}
+
+@keyframes slide{
+	0%{
+		background-image: url("https://images.pexels.com/photos/2226987/pexels-photo-2226987.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+	}
+	20%{
+		background-image: url("https://images.pexels.com/photos/6529713/pexels-photo-6529713.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+	}
+	20.01%{
+		background-image: url("https://images.pexels.com/photos/5876/food-salad-healthy-vegetables.jpg?auto=compress&cs=tinysrgb&h=750&w=1260");
+	}
+	40%{
+		background-image: url("https://images.pexels.com/photos/3673762/pexels-photo-3673762.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+	}
+	40.01%{
+		background-image: url("https://images.pexels.com/photos/5938/food-salad-healthy-lunch.jpg?auto=compress&cs=tinysrgb&h=750&w=1260");
+	}
+	60%{
+		background-image: url("https://images.pexels.com/photos/1300972/pexels-photo-1300972.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+	}
+	60.01%{
+		background-image: url("https://images.pexels.com/photos/1120575/pexels-photo-1120575.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+	}
+	80%{
+		background-image: url("https://images.pexels.com/photos/1414651/pexels-photo-1414651.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+	}
+	80.01%{
+		background-image: url("https://images.pexels.com/photos/6249455/pexels-photo-6249455.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+	}
+	100%{
+		background-image: url("https://images.pexels.com/photos/5966631/pexels-photo-5966631.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+	}
+}
+
+
+
+/*#################### same style section #################*/
+.about ,.services, .menu, .contact, .footer{
+	font-family: 'Poppins', sans-serif;
+}
+.about .about-content,
+ .service .serv-content,
+  .contact .contact-content{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+section{
+	padding: 100px 0;
+}
+section .title{
+	position: relative;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 500;
+	margin-bottom: 60px;
+	padding-bottom: 20px;
+	font-family: 'Ubuntu', sans-serif;
+}
+section .title::before{
+	content: "";
+	position: absolute;
+	width: 180px;
+	height: 4px;
+	background: #111;
+	bottom: 0px;
+	left: 50%;
+	transform:  translateX(-50%);
+
+}
+section .title::after{
+	position: absolute;
+	bottom: -12px;
+	left: 50%;
+	font-size: 20px;
+	color:  rgb(26, 188, 156);
+	padding: 5px;
+	background: #fff;
+	transform: translateX(-50%);
+
+}
+/*#################### about me page ####################*/
+.about{
+	height: 100vh;
+}
+.about .title::after{
+	content: "History";
+	color:#16a085;
+}
+.about .about-content .left{
+	width: 50%;
+
+}
+.about .about-content .left img{
+	width: 90%;
+
+}
+
+.about .about-content .right{
+	width: 50%;
+	
+}
+.about .about-content .right .text{
+	font-size: 25px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.about .about-content .right .text span{
+	color:#2ecc71; 
+}
+
+.about .about-content .right p{
+	text-align: justify;
+
+
+}
+.about .about-content .right a{
+	display: inline-block;
+	background: #2ecc71;
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: 500;
+	padding: 12px 25px;
+	margin: 10px 0;
+	border-radius: 10px;
+	border:2px solid rgb(26, 188, 156) ;
+	transition: all 0.3s ease;
+
+}
+.about .about-content .right a:hover{
+	color: rgb(26, 188, 156);
+	background: none;
+}
+
+
+
+
+
+/*#################### services section ####################*/
+.services{
+	height: 80vh;
+}
+
+.services{
+	color: #fff;
+	background-image: linear-gradient(to left bottom, #73ff8a, #5ad568, #40ad47, #258728, #016206);
+}
+.services .title{
+	font-size: 35px;
+}
+.services .title::before, .hobbies .title::before{
+	background-color: #ffffff;
+	width: 200px;
+}
+.services .serv-content .card{
+	width: calc(33% - 20px);
+	display:inline-flex;
+	text-align: center;
+	border-radius: 6px;
+	padding: 120px 25px;
+	cursor: pointer;
+	margin-left: 15px;
+	transition: all 0.4s ease;
+	text-shadow: 3px 1px 2px black;
+}
+.services .serv-content .card:hover{
+	background:crimson;
+}
+.services .serv-content .card:nth-child(1){
+	background: url("https://i.pinimg.com/originals/4f/34/35/4f3435e465f7561f8da082b374113f2f.jpg")no-repeat center;
+	background-size: cover;
+	box-shadow: 0px 2px 2px 2px;
+}
+.services .serv-content .card:nth-child(2){
+	background: url("https://www.taquerialascumbres.com/static/media/background2.3fec4658.jpg")no-repeat center;
+	background-size: cover;
+	box-shadow: 0px 2px 2px 2px;
+}
+.services .serv-content .card:nth-child(3){
+	background: url("https://www.springhappenings.com/wp-content/uploads/2014/09/crsrxfllostehmuxwzqfkdarpcg0di40toehyl4mzmgrkmy3dpfzxttukvsmluvp-o.jpg")no-repeat center;
+	background-size: cover;
+	box-shadow: 0px 2px 2px 2px;
+}
+.services .serv-content .card .box{
+	transition: all 0.4s ease;
+}
+.services .serv-content .card:hover .box{
+	transform: scale(1.1); 
+}
+.services .serv-content .card i{
+	font-size: 100px;
+	color:crimson;
+	text-shadow: 0px 5px yellow;
+}
+.services .serv-content .card .text a{
+	font-size: 27px;
+	font-weight: 500;
+	margin: 10px 0 7px 0;
+	color: crimson;
+	text-shadow: 0px 2px yellow;
+	text-decoration: none;
+}
+.services .serv-content .card p{
+	color: #ffffff;
+	margin: 10px 0 7px 0;
+	text-shadow: 0px 2px crimson; 
+	font-size: 20px
+
+}
+
+
+/
+/*#################### menu section ####################*/
+.menu{
+	height: 80vh;
+
+}
+.menu .title::after{
+    content: "Our Menu";
+
+}
+.menu .carousel .card{
+    background-image: linear-gradient(to left bottom, #68dc7c, #53c366, #3fab51, #28933c, #097c27);
+    border-radius: 6px;
+    padding: 120px 35px;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px black;
+}
+.menu .carousel .card:nth-child(1):hover{
+    background: url("https://images.pexels.com/photos/6529790/pexels-photo-6529790.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+}
+.menu .carousel .card .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.menu .carousel .card:hover .box{
+    transform: scale(1.05);
+}
+.menu .carousel .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+}
+.menu .carousel .card img{
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    border: 5px solid rgb(26, 188, 156);
+    transition: all 0.3s ease;
+}
+.menu .carousel .card:hover img{
+    border-color: #fff;
+}
+.owl-dots{
+    text-align: center;
+    margin-top: 18px;
+}
+.owl-dot{
+    height: 15px;
+    width: 15px;
+    margin: 0 7px;
+    outline: none!important;
+    border-radius: 50%;
+    border: 2px solid rgb(26, 188, 156)!important;
+    transition: all 0.3s ease;
+}
+.owl-dot.active{
+    width: 30px;
+    border-radius: 14px;
+}
+.owl-dot.active,
+.owl-dot:hover{
+    background: rgb(26, 188, 156)!important;
+}
+
+
+/*################## contacts #########################*/
+.contact{
+	height: 90vh;
+}
+
+.contact .title::after{
+	content: "Message Us At";
+}
+
+.contact .contact-content .column{
+	width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+	font-size: 40px;
+	font-weight: 500;
+	margin-left: 80px;
+}
+.contact .contact-content .left p{
+	text-align: justify;
+	margin-left: 100px;
+	margin-top: 20px;
+}
+
+.contact .contact-content .left .icons{
+	margin:10px 0;
+}
+
+.contact .contact-content .row{
+	display: flex;
+	height: 60px;
+	align-items: center;
+
+}
+.contact .contact-content .row .info{
+	margin-left: 150px;
+
+}
+.contact .contact-content .row i{
+	font-size: 30px;
+	color:#16a085;
+
+}
+.contact .contact-content .info .head{
+	font-weight: 500;
+
+}
+.contact .contact-content .info .sub-title{
+	color: #222;
+}
+
+.contact .right form .fields{
+	display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .field{
+	height: 47px;
+	width: 100%;
+	margin-bottom: 15px;
+
+}
+.contact .right form .textarea{
+	height: 80px;
+	width: 100%;
+
+
+}
+
+.contact .right form .name{
+	margin-right: 10px;
+}
+.contact .right form .email{
+	margin-left: 10px;
+}
+
+.contact .right form .field input,
+.contact .right form .textarea textarea{
+	height: 100%;
+	width: 100%;
+	border: 1px solid lightgrey;
+	border-radius: 6px;
+	outline: none;
+	padding: 0 15px;
+	font-size: 17px;
+	font-family: 'Poppins', sans-serif;	
+}
+
+.contact .right form .textarea textarea{
+	padding-top: 10px;
+	resize: none;
+}
+.contact .right form .button{
+	height: 50px;
+	width: 170px;
+}
+.contact .right form .button button{
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to top, #58ff4a, #4af544, #3aea3e, #26e037, #02d631);
+	color:#ffffff;
+	font-size: 20px;
+	font-weight: 600;
+	border-radius: 6px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border: none;
+}
+.contact .right form .button button:hover{
+	color:#2ecc71;
+	background: none;
+}
+
+
+/*############################ footer #########################
+*/
+
+footer{
+	background: #111;
+	padding: 20px 23px;
+	color: #ffffff;
+	text-align: center;
+
+}
+footer span a{
+	color: #2ecc71;
+	text-decoration: none;
+}
+
+footer span a:hover{
+	text-decoration: underline;
+
+}
+
+
+/*####################### responsive media #################*/
+@media (max-width: 1750px){
+	.about .about-content .left img{
+		height:400px;
+		width: 90%;
+	}
+	.about .about-content .right{
+	width: 50%;
+	
+	}
+	.about .about-content .right .text{
+		font-size: 15px;
+		font-weight: 600;
+		margin-bottom: 10px;
+	}
+	.about .about-content .right .text span{
+		color:#2ecc71; 
+	}
+
+	.about .about-content .right p{
+		text-align: justify;
+
+
+	}
+	.about .about-content .right a{
+		font-size: 20px;
+
+	}
+	.about .about-content .right a:hover{
+		color: rgb(26, 188, 156);
+	}
+	@media (max-width: 1547px){
+
+	.home{
+		height: 80vh;
+		background-attachment: fixed;
+	}
+	.home .home-content .text-1{
+		font-size: 25px;
+		max-width: 1000px;
+	}
+	.home .home-content .text-2{
+		font-size: 40px;
+	}
+	.home .home-content .text-3{
+		font-size: 25px;
+		margin:10px 0;
+	}
+	.home .home-content .text-3 span{
+		color: #2ecc71;
+	}
+	.home .home-content a{
+		font-size: 10px;
+		font-weight: 500;
+		padding: 8px 15px;
+		margin: 10px 0;
+		border-radius: 10px;
+		transition: all 0.3s ease;
+	}
+	.principal{
+		left: 55%;
+		top: 40%;
+		transform: translate(-50%, -50%);
+		position: absolute;
+		letter-spacing: 5px;
+		text-align: center;
+}
+	.about{
+		height: 150vh;
+	}
+
+	.about .about-content .left img{
+		height:300px;
+		width: 40%;
+	}
+	.about .about-content .right{
+		width: 45%;
+	
+	}
+	.about .about-content .right .text{
+		font-size: 25px;
+		font-weight: 600px;
+		margin-top: -15%;
+	}
+	.about .about-content .right p{
+		text-align: justify;
+		font-size: 15px;
+
+
+	}
+	.about .about-content .right a{
+		font-size: 20px;
+
+	}
+	.about .about-content .right a:hover{
+		color: rgb(26, 188, 156);
+		background: none;
+	}
+
+	@media (max-width: 1500px){
+
+	.home .home-content .text-1{
+		font-size: 25px;
+		max-width: 1000px;
+	}
+
+	.contact{
+		height: 120vh;
+	}
+	.menu .carousel .card{
+	    padding: 110px 55px;
+	}
+	.services{
+		height: 170vh;
+		margin-left: -35px;
+	}
+
+	.about{
+    	height: 120vh;
+    }
+	.max-width{
+		padding: 0px 40px;
+		max-width: 1500px;
+	}
+	.menu-btn{
+		display: block;
+		z-index: 999;
+	}
+	.menu-btn i.active:before{
+		content: "\f00d";
+	}
+	.navbar .menu{
+		position: fixed;
+		height: 100vh;
+		width: 100%;
+		left: -100%;
+		top: 0;
+		text-align: center;
+		background: url("https://www.pixelstalk.net/wp-content/uploads/2016/06/Free-HD-Gif-Wallpapers-For-Desktop.gif");
+		padding-top: 90px;
+		transition: all 0.4s ease;
+
+	}
+	.navbar .menu.active{
+		left: 0;
+	}
+	.navbar .menu li{
+		display: block;
+	}
+	.navbar .menu li a{
+		display: inline-block;
+		margin: 30px 0;
+		font-size: 25px;
+	}
+	.home .home-content .text-2{
+		font-size: 50px;
+	}
+	.home .home-content .text-3{
+		font-size: 25px;
+	}
+	.home .home-content a{
+		font-size:  25px;
+		padding: 10px 30px;
+	}
+	/*##################### about page ###############*/
+	.max-width{
+		max-width: 1000px;
+	}
+	.about .about-content .column{
+		width: 100%;
+	}
+	.about .about-content .left{
+		display: flex;
+		justify-content: center;
+		margin: 0 auto 80px;
+	}
+	.about .about-content .right{
+		flex: 100%;
+	}
+	.services .serv-content .card{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	 .contact .contact-content .column{
+		width: 100%;
+		margin-bottom: 35px;
+	}
+	 .contact .right form .fields{
+        flex-direction: column;
+    }
+    .contact .right form .name,
+    .contact .right form .email{
+        margin: 0;
+    }
+    @media (max-width: 1200px){
+
+    .about{
+    	height: 150vh;
+    }
+	
+	.about .about-content .left img{
+		height:400px;
+		width: 100%;
+		margin-top: -20px;
+		
+	}
+	.about .about-content .left{
+		display: flex;
+		justify-content: center;
+		margin: 0 auto 60px;
+	}
+}
+
+@media (max-width: 620px);{
+	}
+	.home .home-content a{
+		font-size: 30px;
+		padding: 4px 15px;
+	}
+	.home .home-content .text-1{
+		font-size: 15px;
+		margin-left:-50px;
+	}	
+	.home .home-content .text-2{
+		font-size: 30px;
+		margin-left: -50px;
+	}
+	.home .home-content .text-3{
+		font-size: 30px;
+		margin-left: -50px;
+	}
+	.home .home-content a{
+		font-size: 20px;
+		margin-left: -50px;
+	}
+	.about .about-content .left img{
+		height:400px;
+		width: 100%;
+		margin-left: -10px;
+		
+	}
+	.about .about-content .right{
+		font-size: 10px;
+		font-weight: 600;		
+		margin-top: 10%;
+}
